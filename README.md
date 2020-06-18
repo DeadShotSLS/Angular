@@ -1,3 +1,13 @@
+## code
+npm install -g @angular/cli
+
+npm cache clean
+
+ng new my-app
+
+ng serve --open
+
+
 # Store
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
