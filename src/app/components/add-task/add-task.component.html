@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Add Your Task</h1>
+  <br>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" class="form-control" id="task" required [(ngModel)]="task.task" name="task" placeholder="Enter Your task">
+      <input type="submit" class="btn btn-primary" value="Add">
+    </div>
+  </form>
+  <div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>My Task</h1>
+  <table class="table table-bordered">
+    <thead class="thead-dark col">
+      <tr>
+        <!-- <th scope="col">ID</th> -->
+        <th scope="col">Task</th>
+        <!-- <th scope="col">Create Date</th> -->
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of task | async">
+        <!-- <td>{{task.id}}</td> -->
+        <td>{{task.task}}</td>
+        <td>{{task.status}}
+
+        </td>
+        <!-- <td>@mdo</td> -->
+        <td>
+          <button (click)="updateTask(task)" class="btn btn-success">Update</button> &nbsp;
+          <button (click)="deleteTask(task._id)" class="btn btn-danger">Delete</button> &nbsp;
+          <button (click)="doneTask(task._id,status=true)" class="btn btn-warning">Done</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
